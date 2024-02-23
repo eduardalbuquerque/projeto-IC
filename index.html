@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Eduarda Albuquerque</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            padding: 0%;
+            background-color: rgb(226, 226, 226);
+        }
+
+        header {
+            background-color: #dda0dd;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #dda0dd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        nav a {
+            color: rgb(59, 59, 59);
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: rgb(248, 219, 244);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        h2 {
+            color: #dda0dd;
+        }
+
+        h1, p {
+            color: rgb(59, 59, 59);
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Oi, meu nome é Eduarda Albuquerque</h1>
+        <p>Para saber mais sobre mim, clique nas opções abaixo</p>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('sobre'); return false;">Sobre Mim</a>
+        <a href="#" onclick="showSection('hobbys'); return false;">Hobbys</a>
+        <a href="#" onclick="showSection('contato'); return false;">Contato</a>
+    </nav>
+
+    <section id="sobre" class="hidden">
+        <h2>Sobre Mim</h2>
+        <img src="euu.jpg" alt="Eduarda Albuquerque" style="width: 100%; max-width: 300px; aspect-ratio: 1/1; object-fit: cover; border-radius: 50%;">
+        <p>Sou Eduarda Albuquerque, tenho 19 anos, nasci dia 17 de agosto.</p>
+        <p>Atualmente faço Ciência da Computação no Centro de informática da UFPE</p>
+        <p>Para conhecer ainda mais a faculdade, clique -> <a href="https://portal.cin.ufpe.br/">CIn-UFPE</a></p>
+
+    </section>
+
+    <section id="hobbys" class="hidden">
+        <h2>Hobbys</h2>
+        <p>Praticar Exercícios físicos:</p>
+        <ul>
+            <li>Praticar esportes (ballet, natação, vôlei, entre outros)</li>
+            <li>Fazer academia</li>
+        </ul>
+        <p>Viajar</p>
+        <p>Ir em brinquedos (de adrenalina) de parques de diversão</p>
+        <p>Jogar:</p>
+        <ul>
+            <li>Jogos de Tabuleiro ou cartas</li>
+            <li>Jogos eletrônicos, entre outros</li>
+        </ul>
+        <p>Assistir séries e filmes</p>
+        <p>Programar</p>
+        <p>Brincar/Passear/cuidar da minha cachorrinha Bella</p>
+        <img src="bel 1.png" alt="belinha" style="width: 100%; max-width: 400px; aspect-ratio: 1/1; object-fit: cover; border-radius: 50%;">
+        <img src="bel2.png" alt="belinha" style="width: 100%; max-width: 400px; aspect-ratio: 1/1; object-fit: cover; border-radius: 50%;">
+        <img src="bel3.png" alt="belinha" style="width: 100%; max-width: 400px; aspect-ratio: 1/1; object-fit: cover; border-radius: 50%;">
+    </section>
+
+    <section id="contato" class="hidden">
+        <h2>Contato</h2>
+        <p>Email: evas@cin.ufpe.br</p>
+    </section>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(function (section) {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+    <footer>
+        <p>evas@cin.ufpe.br</p>
+    </footer>
+</body>
+</html>
